@@ -1,0 +1,16 @@
+{
+    "name": "SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel",
+    "rootNamespace": "SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel",
+    "references": [
+        "GUID:4243a44fbe4fc784fa891c825bc8c965"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

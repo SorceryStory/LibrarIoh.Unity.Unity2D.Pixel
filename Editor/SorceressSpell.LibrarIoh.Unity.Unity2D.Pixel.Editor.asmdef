@@ -1,0 +1,19 @@
+{
+    "name": "SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel.Editor",
+    "rootNamespace": "SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel.Editor",
+    "references": [
+        "SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel",
+        "SorceressSpell.LibrarIoh.Math"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
