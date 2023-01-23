@@ -32,7 +32,8 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel
         [SerializeField]
         private int _pixelSize = 1;
 
-        private int _pixelSizeMax;
+        [SerializeField]
+        private int _pixelSizeMax = 1;
 
         [SerializeField]
         private float _pixelsPerUnit = 16;
@@ -141,10 +142,6 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel
 
         public int PixelSizeMax
         {
-            private set
-            {
-                _pixelSizeMax = value;
-            }
             get
             {
                 return _pixelSizeMax;
