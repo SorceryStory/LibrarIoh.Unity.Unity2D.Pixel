@@ -15,12 +15,6 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel
         private Camera _camera;
 
         [SerializeField]
-        private Color _clearColor = Color.black;
-
-        [SerializeField]
-        private bool _clearScreen = false;
-
-        [SerializeField]
         private bool _cropX = false;
 
         [SerializeField]
@@ -51,30 +45,6 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel
         #endregion Fields
 
         #region Properties
-
-        public Color ClearColor
-        {
-            set
-            {
-                _clearColor = value;
-            }
-            get
-            {
-                return _clearColor;
-            }
-        }
-
-        public bool ClearScreen
-        {
-            set
-            {
-                _clearScreen = value;
-            }
-            get
-            {
-                return _clearScreen;
-            }
-        }
 
         public bool CropX
         {
@@ -246,18 +216,6 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel
             SetWorldToCameraMatrix();
         }
 
-        private void OnPreRender()
-        {
-            if (ClearScreen)
-            {
-                // According to: https://docs.unity3d.com/ScriptReference/GL.html GL drawing
-                // commands execute immediately. That means if you call them in Update(), they will
-                // be executed before the camera is rendered (and the camera will most likely clear
-                // the screen, making the GL drawing not visible).
-                GL.Clear(true, true, ClearColor, 0f);
-            }
-        }
-
         private void OnValidate()
         {
             if (PixelSize < 1)
@@ -321,14 +279,8 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel
             {
                 Vector2Int remainder = new Vector2Int(Screen.width, Screen.height) - finalRenderSize;
                 Vector2Int bottomLeft = remainder / 2;
-                //Vector2Int topright = remainder - bottomLeft;
 
-                _camera.rect = new Rect(
-                    _cropX ? (float)bottomLeft.x / Screen.width : 0f,
-                    _cropY ? (float)bottomLeft.y / Screen.height : 0f,
-                    _cropX ? (float)finalRenderSize.x / Screen.width : 1f,
-                    _cropY ? (float)finalRenderSize.y / Screen.height : 1f
-                    );
+                _camera.pixelRect = new Rect(bottomLeft.x, bottomLeft.y, finalRenderSize.x, finalRenderSize.y);
             }
             else
             {

@@ -12,9 +12,6 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel.Editor
         #region Fields
 
         public VisualTreeAsset UXML;
-        private ColorField _clearColorField;
-        private VisualElement _clearScreenDependentVisualElement;
-        private Toggle _clearScreenToggle;
         private Toggle _cropXToggle;
         private Toggle _cropYToggle;
         private Toggle _forceHighestPixelSizeToggle;
@@ -54,16 +51,6 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel.Editor
             _cropYToggle = inspectorVisualElement.Q<Toggle>("CropY");
             _cropYToggle.RegisterCallback<ChangeEvent<bool>>(OnCropYChanged);
 
-            // Clear
-            _clearScreenToggle = inspectorVisualElement.Q<Toggle>("ClearScreen");
-            _clearScreenToggle.RegisterCallback<ChangeEvent<bool>>(OnClearScreenChanged);
-
-            _clearScreenDependentVisualElement = inspectorVisualElement.Q<VisualElement>("ClearScreenDependent");
-            UpdateClearScreenDependentElement();
-
-            _clearColorField = inspectorVisualElement.Q<ColorField>("ClearColor");
-            _clearColorField.RegisterCallback<ChangeEvent<Color>>(OnClearColorChanged);
-
             // Specific Resolution
             _targetSpecificResolutionToggle = inspectorVisualElement.Q<Toggle>("TargetSpecificResolution");
             _targetSpecificResolutionToggle.RegisterCallback<ChangeEvent<bool>>(OnTargetSpecificResolutionChanged);
@@ -84,15 +71,6 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel.Editor
 
             // Return the finished inspector UI
             return inspectorVisualElement;
-        }
-
-        private void OnClearColorChanged(ChangeEvent<Color> evt)
-        {
-        }
-
-        private void OnClearScreenChanged(ChangeEvent<bool> evt)
-        {
-            UpdateClearScreenDependentElement();
         }
 
         private void OnCropXChanged(ChangeEvent<bool> evt)
@@ -157,11 +135,6 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel.Editor
 
             UpdatePixelSizeElement();
             UpdateTargetSpecificResolutionDependentElement();
-        }
-
-        private void UpdateClearScreenDependentElement()
-        {
-            _clearScreenDependentVisualElement.style.display = _pixelCamera.ClearScreen ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
         private void UpdatePixelSizeElement()

@@ -9,13 +9,6 @@
         <ui:Toggle label="X" name="CropX" binding-path="_cropX" />
         <ui:Toggle label="Y" name="CropY" binding-path="_cropY" />
     </ui:VisualElement>
-    <ui:Label text="Clear Screen" display-tooltip-when-elided="true" name="ClearScreenHeader" class="librarioh-pixel-editor-header" style="margin-left: 3px; margin-right: 3px; margin-top: 10px; margin-bottom: 3px; -unity-font-style: bold;" />
-    <ui:VisualElement name="ClearScreenGroup">
-        <ui:Toggle label="Clear Screen" name="ClearScreen" binding-path="_clearScreen" />
-        <ui:VisualElement name="ClearScreenDependent">
-            <uie:ColorField label="Clear Color" value="#000000FF" name="ClearColor" binding-path="_clearColor" show-alpha="false" show-eye-dropper="true" hdr="false" focusable="true" class="librarioh-pixel-editor-innerproperty" style="margin-left: 16px;" />
-        </ui:VisualElement>
-    </ui:VisualElement>
     <ui:Label text="Specific Resolution" display-tooltip-when-elided="true" name="TargetSpecificResolutionHeader" class="librarioh-pixel-editor-header" style="margin-left: 3px; margin-right: 3px; margin-top: 10px; margin-bottom: 3px; -unity-font-style: bold;" />
     <ui:VisualElement name="TargetSpecificResolutionGroup">
         <ui:Toggle label="Target Specific Resolution" name="TargetSpecificResolution" binding-path="_targetSpecificResolution" />

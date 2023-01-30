@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.0] - 2023-01-30
+
+### Changed
+
+- PixelCamera: Changed the way the viewport rect is calculated, now uses Camera's PixelRect.
+
+### Removed
+
+- PixelCamera: Removed ClearColor.
+
 ## [0.1.1] - 2023-01-23
 
 ### Changed
