@@ -2,7 +2,7 @@
     "name": "SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel",
     "rootNamespace": "SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel",
     "references": [
-        "GUID:4243a44fbe4fc784fa891c825bc8c965"
+        "SorceressSpell.LibrarIoh.Math"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
