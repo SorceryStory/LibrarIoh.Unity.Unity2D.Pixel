@@ -6,7 +6,7 @@
   "unity": "2018.1",
   "description": "LibrarIoh.Unity.Unity2D.Pixel (https://github.com/SorceryStory/LibrarIoh.Unity.Unity2D.Pixel)\n\nPixel Utilities for Unity.\n\nDepends on:\n  - LibrarIoh.Math (https://github.com/SorceryStory/LibrarIoh.Math)",
   "dependencies": {
-    "com.sorceressspell.librarioh.math": "0.4.0"
+    "com.sorceressspell.librarioh.math": "0.5.1"
   },
   "author": {
     "name": "Joana Almeida",
