@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.1] - 2023-03-11
+
+### Added
+
+- `Unity.UI` code related to pixel classes and operations.
+
 ## [0.2.0] - 2023-01-30
 
 ### Changed
