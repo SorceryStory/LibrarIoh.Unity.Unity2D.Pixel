@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2023-04-18
+
+### [0.3.0] Changed
+
+- Ran a Code Analysis Tool, made fixes to clean code.
+
+### [0.3.0] Removed
+
+- `Unity.UI` code related to pixel classes and operations.
+
 ## [0.2.1] - 2023-03-11
 
 ### Added

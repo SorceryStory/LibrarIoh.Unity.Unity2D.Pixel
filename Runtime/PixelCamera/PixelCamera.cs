@@ -272,7 +272,7 @@ namespace SorceressSpell.LibrarIoh.Unity.Unity2D.Pixel
             finalRenderSize *= _pixelSize;
 
             // Camera Size Recalculation
-            _camera.orthographicSize = ((_cropY ? finalRenderSize.y : Screen.height) / 2.0f) / (_pixelsPerUnit * _pixelSize);
+            _camera.orthographicSize = (_cropY ? finalRenderSize.y : Screen.height) / 2.0f / (_pixelsPerUnit * _pixelSize);
 
             // Camera Viewport Rect Recalculation
             if (_cropX || _cropY)
