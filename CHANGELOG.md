@@ -12,7 +12,7 @@
 
 ## [0.2.1] - 2023-03-11
 
-### Added
+### [0.2.1] Added
 
 - `Unity.UI` code related to pixel classes and operations.
 
